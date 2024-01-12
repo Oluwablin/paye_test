@@ -35,3 +35,23 @@ cp .env.example .env
 ```
 
 This should create an exact copy of the .env.example file. Name the newly created file .env and update it with your local environment variables (database connection info and others).
+
+### Laravel Command Usage
+
+Run the following command to fetch articles from external url if it has no limit( five by default), if limit is 20, has only comments etc
+
+```bash
+php artisan fetch_articles
+```
+
+```bash
+php artisan fetch_articles --limit=20
+```
+
+```bash
+php artisan fetch_articles --has_comments_only
+```
+
+```bash
+php artisan fetch_articles --limit=20 --has_comments_only
+```
